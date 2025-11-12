@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Violencia Digital: La Nueva Arma</title>
+  <meta name="description" content="Conoce el caso de Marazoly y la lucha legal en México contra la violencia sexual digital generada por IA. Información, recursos y ayuda para víctimas." />
+  <meta name="keywords" content="Violencia Digital, DeepFake, Ley Olimpia, Marazoly, IA, México, Reforma, Ayuda, Recursos" />
+  <meta name="author" content="Violencia Digital México" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <script src="assets/chart.umd.min.js"></script>
+</head>
+<body>
+  <!-- Progress bar -->
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <header class="header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="logo-container">
+        <img src="assets/logo.svg" alt="Logo Violencia Digital" class="logo" height="48" width="48" />
+        <span class="site-title">Violencia Digital México</span>
+      </div>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#caso">El Caso</a></li>
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#lucha">Lucha Legal</a></li>
+        <li><a href="#recursos">Ayuda</a></li>
+      </ul>
+      
+      <!-- Toggle Modo Oscuro/Claro -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar entre modo claro y oscuro">
+        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 1V3M12 21V23M23 12H21M3 12H1M20.49 3.51L19.07 4.93M4.93 19.07L3.51 20.49M20.49 20.49L19.07 19.07M4.93 4.93L3.51 3.51" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section id="inicio" class="section hero" aria-labelledby="hero-title">
+      <div class="hero-bg" role="img" aria-label="Imagen de fondo representando tecnología y justicia">
+        <!-- Video de fondo animado -->
+        <div class="hero-video-container">
+          <canvas id="heroCanvas" class="hero-canvas"></canvas>
+        </div>
+        <div class="hero-pattern"></div>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-logo-wrapper fade-in-up">
+          <img src="assets/logo.svg" alt="Logo Violencia Digital" class="hero-logo" width="96" height="96" />
+        </div>
+        <h1 id="hero-title" class="fade-in-up delay-1">La Inteligencia Artificial no es el Delito. <span class="gradient-text">Usarla para Destruir Vidas, Sí.</span></h1>
+        <h2 class="fade-in-up delay-2">Conoce el caso de <span class="highlight">Marazoly</span> y la lucha en México para legislar contra la violencia sexual generada por IA.</h2>
+        <blockquote class="hero-quote fade-in-up delay-3">
+          <svg class="quote-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 18C10 14.6863 12.6863 12 16 12V8C10.4772 8 6 12.4772 6 18V24H14V18H10Z" fill="currentColor"/>
+            <path d="M26 18C26 14.6863 23.3137 12 20 12V8C25.5228 8 30 12.4772 30 18V24H22V18H26Z" fill="currentColor"/>
+          </svg>
+          "La tecnología puede ser un arma, pero también puede ser justicia."
+        </blockquote>
+        <p class="hero-summary fade-in-up delay-4">En 2019, Marazoly, de Aguascalientes, fue víctima de videos sexuales falsos creados con IA (DeepFakes). A pesar de los años, su caso sigue sin resolverse.</p>
+        <div class="cta-buttons fade-in-up delay-5">
+          <a href="#caso" class="btn btn-primary" aria-label="Conoce la historia de Marazoly">
+            <span>Conoce su historia</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#lucha" class="btn secondary" aria-label="Entiende la propuesta de ley">
+            <span>Entiende la propuesta de ley</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <section id="caso" class="section reveal" aria-labelledby="caso-title">
+      <h2 id="caso-title"><span class="badge">Caso Real</span> El Caso de Marazoly: Impunidad Digital</h2>
+      <div class="section-content">
+        <div class="intro-text">
+          <p class="lead-paragraph">El caso de Marazoly representa un parteaguas en la discusión sobre violencia digital en México. Su historia expone las lagunas legales que existen cuando la tecnología avanza más rápido que las leyes, dejando a las víctimas en un estado de indefensión total.</p>
+        </div>
+        
+        <div class="timeline interactive-timeline">
+          <div class="timeline-item reveal expandable">
+            <div class="timeline-marker" data-tooltip="2019"></div>
+            <div class="timeline-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="timeline-date">2019 - El Inicio de la Pesadilla</div>
+              <h3>¿Qué Sucedió? <span class="expand-icon">+</span></h3>
+            </div>
+            <div class="timeline-content collapsed">
+                <h3>Otros Casos Documentados en México</h3>
+                <p class="section-intro">El problema no se limita a un solo caso. Múltiples incidentes demuestran que la violencia sexual digital mediante IA es una amenaza real y creciente:</p>
+
+                <div class="testimonial-carousel cases-carousel">
+                  <div class="carousel-container">
+                    <button class="carousel-btn carousel-prev" aria-label="Caso anterior">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                    <div class="carousel-track-container">
+                      <div class="carousel-track">
+                        <div class="carousel-slide active">
+                          <div class="other-case">
+                            <span class="case-icon">🎓</span>
+                            <div>
+                              <h4>Caso IPN (Instituto Politécnico Nacional) - 2024</h4>
+                              <p><strong>Los hechos:</strong> Un estudiante fue acusado de utilizar inteligencia artificial para crear y vender fotografías desnudas falsas de al menos mil mujeres, incluyendo compañeras de clase...</p>
+                              <p><strong>Resultado:</strong> A pesar de la denuncia masiva, el caso enfrenta dificultades legales por la falta de tipificación específica del delito.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-slide">
+                          <div class="other-case">
+                            <span class="case-icon">🗳️</span>
+                            <div>
+                              <h4>Caso Sofía Yunes - Aspirante a Diputada Local - 2023</h4>
+                              <p><strong>Los hechos:</strong> Durante su campaña política, Sofía Yunes denunció públicamente que habían creado fotografías falsas de ella desnuda usando inteligencia artificial...</p>
+                              <p><strong>Contexto político:</strong> El ataque ocurrió en un momento crítico de su campaña, evidenciando cómo la violencia digital se usa como arma política.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-slide">
+                          <div class="other-case">
+                            <span class="case-icon"></span>
+                            <div>
+                              <h4>Escuela Secundaria en Jalisco - 2024</h4>
+                              <p><strong>Los hechos:</strong> Un grupo de estudiantes varones de secundaria creó DeepFakes pornográficos de al menos 15 compañeras de clase usando una aplicación móvil...</p>
+                              <p><strong>Impacto en víctimas:</strong> Varias de las adolescentes tuvieron que cambiar de escuela. Se reportaron casos de autolesiones.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-slide">
+                          <div class="other-case">
+                            <span class="case-icon">💼</span>
+                            <div>
+                              <h4>Caso de Extorsión Empresarial - CDMX - 2023</h4>
+                              <p><strong>Los hechos:</strong> Una ejecutiva de una empresa tecnológica en Ciudad de México fue víctima de extorsión. Los atacantes crearon videos DeepFake pornográficos de ella...</p>
+                              <p><strong>Desenlace:</strong> Aunque no pagó el rescate, los videos fueron publicados en foros especializados... afectando gravemente su carrera.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-slide">
+                          <div class="other-case">
+                            <span class="case-icon">🎬</span>
+                            <div>
+                              <h4>Influencers y Creadoras de Contenido - 2023-2024</h4>
+                              <p><strong>Patrón sistemático:</strong> Decenas de influencers mexicanas en plataformas como TikTok, Instagram y YouTube han reportado la creación de contenido pornográfico falso...</p>
+                              <p><strong>Monetización del abuso:</strong> Sitios web especializados ofrecen suscripciones para acceder a "packs" de DeepFakes.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-btn carousel-next" aria-label="Siguiente caso">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0" aria-label="Ir a caso 1"></button>
+                    <button class="indicator" data-slide="1" aria-label="Ir a caso 2"></button>
+                    <button class="indicator" data-slide="2" aria-label="Ir a caso 3"></button>
+                    <button class="indicator" data-slide="3" aria-label="Ir a caso 4"></button>
+                    <button class="indicator" data-slide="4" aria-label="Ir a caso 5"></button>
+                  </div>
+                </div>
+                <div class="pattern-analysis">
+                  <h4>Patrones Identificados...</h4>
+                  ...
+                </div>
+                </div>
+                
+                <div class="consequence-card">
+                  <div class="consequence-icon">💼</div>
+                  <h4>Consecuencias Profesionales</h4>
+                  <ul>
+                    <li>Dificultad para conseguir o mantener empleo</li>
+                    <li>Daño a su reputación profesional</li>
+                    <li>Discriminación laboral por estigma</li>
+                    <li>Limitación de oportunidades educativas</li>
+                    <li>Pérdida de ingresos económicos</li>
+                  </ul>
+                </div>
+                
+                <div class="consequence-card">
+                  <div class="consequence-icon">🌐</div>
+                  <h4>Huella Digital Permanente</h4>
+                  <ul>
+                    <li>El contenido sigue circulando en internet</li>
+                    <li>Imposibilidad de eliminar completamente los videos</li>
+                    <li>Aparición en múltiples plataformas y sitios web</li>
+                    <li>Replicación en nuevos formatos y contextos</li>
+                    <li>Vulnerabilidad perpetua ante nuevas difusiones</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- Carrusel de Testimonios -->
+              <div class="testimonial-carousel">
+                <h4 class="carousel-title">💬 Testimonios de Víctimas</h4>
+                <div class="carousel-container">
+                  <button class="carousel-btn carousel-prev" aria-label="Testimonio anterior">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  
+                  <div class="carousel-track-container">
+                    <div class="carousel-track">
+                      <div class="carousel-slide active">
+                        <blockquote class="victim-quote">
+                          <p>"Cada día vivo con el terror de que alguien me reconozca en la calle por esos videos falsos. He perdido empleos, amistades y la paz mental. Lo peor es que las autoridades me dicen que no pueden hacer nada porque 'no existe una ley específica' para este tipo de delito."</p>
+                          <cite>— Testimonio anónimo de víctima de DeepFake pornográfico</cite>
+                        </blockquote>
+                      </div>
+                      
+                      <div class="carousel-slide">
+                        <blockquote class="victim-quote">
+                          <p>"Mi vida se destruyó en cuestión de horas. Un exnovio usó mis fotos para crear videos pornográficos con IA y los envió a toda mi familia, amigos y compañeros de trabajo. Tuve que cambiar de ciudad y renunciar a mi carrera. Y él sigue libre, sin ninguna consecuencia."</p>
+                          <cite>— Ana, 28 años, víctima de pornografía falsa generada por IA</cite>
+                        </blockquote>
+                      </div>
+                      
+                      <div class="carousel-slide">
+                        <blockquote class="victim-quote">
+                          <p>"Lo más aterrador es que ni siquiera sabía que existía esta tecnología. Nunca grabé esos videos, nunca posé para esas fotos, pero ahí está mi rostro. Y la policía me dijo: '¿Cómo probamos que no eras tú?' Me culparon a MÍ."</p>
+                          <cite>— Laura, 32 años, profesora universitaria</cite>
+                        </blockquote>
+                      </div>
+                      
+                      <div class="carousel-slide">
+                        <blockquote class="victim-quote">
+                          <p>"Denuncié hace 3 años. Presenté peritajes que demostraban que los videos eran falsos. Identifiqué al responsable. Pero el Ministerio Público cerró la investigación porque 'no hay delito tipificado'. Mientras tanto, esos videos siguen circulando y destruyendo mi vida."</p>
+                          <cite>— Mariana, 25 años, estudiante de medicina</cite>
+                        </blockquote>
+                      </div>
+                      
+                      <div class="carousel-slide">
+                        <blockquote class="victim-quote">
+                          <p>"Mi hija de 16 años intentó suicidarse cuando sus compañeros de escuela compartieron un DeepFake pornográfico de ella. Como madre, me siento impotente. El sistema nos falló. Necesitamos leyes que protejan a nuestras hijas ahora, no en 10 años."</p>
+                          <cite>— Rosa, madre de víctima adolescente</cite>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <button class="carousel-btn carousel-next" aria-label="Siguiente testimonio">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+                
+                <div class="carousel-indicators">
+                  <button class="indicator active" data-slide="0" aria-label="Ir a testimonio 1"></button>
+                  <button class="indicator" data-slide="1" aria-label="Ir a testimonio 2"></button>
+                  <button class="indicator" data-slide="2" aria-label="Ir a testimonio 3"></button>
+                  <button class="indicator" data-slide="3" aria-label="Ir a testimonio 4"></button>
+                  <button class="indicator" data-slide="4" aria-label="Ir a testimonio 5"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-item reveal expandable">
+            <div class="timeline-marker warning" data-tooltip="Actualidad"></div>
+            <div class="timeline-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="timeline-date">Actualidad - La Impunidad Sistémica</div>
+              <h3>La Falla del Sistema: Un Laberinto sin Salida <span class="expand-icon">+</span></h3>
+            </div>
+            <div class="timeline-content collapsed">
+              <p>A pesar de haber interpuesto denuncias formales ante múltiples instancias, Marazoly ha enfrentado un sistema que simplemente no está preparado para abordar este tipo de violencia digital.</p>
+              
+              <div class="failure-timeline">
+                <h4>Cronología de la Búsqueda de Justicia:</h4>
+                <div class="failure-item">
+                  <strong>Primera denuncia en Aguascalientes:</strong>
+                  <p>Las autoridades locales desestimaron el caso argumentando que "los videos eran claramente editados" y que "no había pruebas de quién los creó". La falta de conocimiento técnico sobre DeepFakes resultó en una investigación superficial.</p>
+                </div>
+                
+                <div class="failure-item">
+                  <strong>Apelación en la Ciudad de México:</strong>
+                  <p>Al buscar justicia a nivel federal, se encontró con el mismo obstáculo: la ausencia de un marco legal específico para criminalizar la creación y difusión de contenido sexual generado por IA sin consentimiento.</p>
+                </div>
+                
+                <div class="failure-item">
+                  <strong>Solicitud de reparación del daño:</strong>
+                  <p>Ninguna institución ha ofrecido compensación, apoyo psicológico institucional o medidas para eliminar el contenido de internet. La víctima ha tenido que costear por su cuenta terapia y servicios legales.</p>
+                </div>
+                
+                <div class="failure-item">
+                  <strong>Intentos de eliminación digital:</strong>
+                  <p>Aunque algunas plataformas eliminaron los videos tras solicitudes de remoción, estos reaparecen constantemente en nuevos sitios, haciendo imposible su erradicación completa.</p>
+                </div>
+              </div>
+              
+              <div class="alert-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 19.5H22L12 2Z" stroke="#f7b731" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M12 9V13" stroke="#f7b731" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="12" cy="16" r="1" fill="#f7b731"/>
+                </svg>
+                <span><strong>Estado actual:</strong> El caso permanece sin resolución. No hay sospechosos identificados, no hay responsables castigados, y la víctima continúa sin reparación del daño ni protección efectiva.</span>
+              </div>
+              
+              <div class="legal-gap">
+                <h4>¿Por qué el sistema falló?</h4>
+                <ol>
+                  <li><strong>Vacío legal:</strong> Cuando ocurrieron los hechos (y aún hoy), no existía una tipificación específica para DeepFakes pornográficos en el Código Penal.</li>
+                  <li><strong>Dificultad probatoria:</strong> Identificar al creador de un DeepFake requiere conocimientos técnicos especializados que las fiscalías no poseen.</li>
+                  <li><strong>Jurisdicción difusa:</strong> El contenido se genera, aloja y distribuye en múltiples plataformas y países, complicando la persecución legal.</li>
+                  <li><strong>Falta de capacitación:</strong> Policías, fiscales y jueces no están capacitados para entender la tecnología ni dimensionar el daño.</li>
+                  <li><strong>Revictimización institucional:</strong> Las víctimas enfrentan incredulidad, culpabilización y falta de empatía por parte de autoridades.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="case-impact">
+          <h3>El Legado del Caso Marazoly</h3>
+          <p>Este caso ha servido como catalizador para visibilizar una problemática que afecta a miles de personas en México y el mundo. La valentía de Marazoly al hacer público su caso (preservando su anonimato) ha inspirado a otras víctimas a denunciar y ha motivado a legisladores a proponer reformas urgentes.</p>
+          <p><strong>Su historia es la prueba viviente de que las leyes actuales son insuficientes y de que necesitamos acción legislativa inmediata.</strong></p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="problema" class="section alt reveal" aria-labelledby="problema-title">
+      <h2 id="problema-title"><span class="badge badge-warning">Alerta</span> Un Problema Creciente: No es un Caso Aislado</h2>
+      <div class="section-content">
+        <div class="intro-text">
+          <p class="lead-paragraph">El caso de Marazoly no es un incidente aislado, sino parte de una crisis global de violencia sexual digital facilitada por la inteligencia artificial. México enfrenta una epidemia silenciosa que afecta principalmente a mujeres, niñas y adolescentes.</p>
+        </div>
+        
+        <div class="tech-section">
+          <h3>La Tecnología del Abuso: Entendiendo los DeepFakes</h3>
+          
+          <div class="cards-row">
+            <div class="card card-icon reveal">
+              <div class="icon-circle"><span>🤖</span></div>
+              <div class="card-body">
+                <h4>¿Qué son los DeepFakes?</h4>
+                <p><strong>Definición técnica:</strong> Los DeepFakes son archivos multimedia (video, imagen o audio) creados o manipulados mediante algoritmos de inteligencia artificial, específicamente redes neuronales de aprendizaje profundo (deep learning), para hacer que parezcan auténticos y reales.</p>
+                <p>El término proviene de "deep learning" (aprendizaje profundo) y "fake" (falso).</p>
+                
+                <div class="tech-detail">
+                  <h5>Tecnología utilizada:</h5>
+                  <ul>
+                    <li><strong>GANs (Redes Generativas Antagónicas):</strong> Dos redes neuronales compiten entre sí: una genera el contenido falso y otra intenta detectarlo, mejorando continuamente la calidad.</li>
+                    <li><strong>Face swapping:</strong> Intercambio de rostros mediante mapeo de puntos faciales.</li>
+                    <li><strong>Lip-sync:</strong> Sincronización de labios para hacer coincidir audio con video.</li>
+                    <li><strong>Morphing:</strong> Transformación gradual de características faciales.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card card-icon reveal">
+              <div class="icon-circle"><span>📱</span></div>
+              <div class="card-body">
+                <h4>¿Qué tan fácil es crear un DeepFake?</h4>
+                <p><strong>Alarmantemente accesible.</strong> Ya no se requiere ser un experto en programación o tener equipos costosos. La democratización de esta tecnología ha multiplicado los casos de abuso.</p>
+                
+                <div class="accessibility-levels">
+                  <h5>Niveles de accesibilidad:</h5>
+                  <div class="level-item">
+                    <span class="level-badge easy">Muy Fácil</span>
+                    <p><strong>Aplicaciones móviles:</strong> Apps como Reface, FaceApp, Wombo permiten intercambios faciales en segundos. Algunas apps específicas crean contenido sexual por suscripción.</p>
+                  </div>
+                  <div class="level-item">
+                    <span class="level-badge medium">Accesible</span>
+                    <p><strong>Plataformas web:</strong> Sitios que ofrecen servicios de DeepFake pornográfico por pagos desde $5-$20 USD. Solo requieren subir fotos de la víctima.</p>
+                  </div>
+                  <div class="level-item">
+                    <span class="level-badge hard">Técnico</span>
+                    <p><strong>Software de código abierto:</strong> DeepFaceLab, FaceSwap y otros programas gratuitos permiten crear DeepFakes de alta calidad con tutoriales en YouTube.</p>
+                  </div>
+                </div>
+                
+                <p class="warning-text"><strong>⚠️ Importante:</strong> Con tan solo 3-5 fotografías de buena calidad de una persona (fáciles de obtener de redes sociales), es posible crear un DeepFake convincente.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="deepfake-evolution">
+            <h4>La Evolución Peligrosa de la Tecnología</h4>
+            <div class="evolution-grid">
+              <div class="evolution-card">
+                <h5>2017-2018</h5>
+                <p>Aparecen los primeros DeepFakes pornográficos de celebridades en Reddit. Calidad moderada, fácilmente detectables.</p>
+              </div>
+              <div class="evolution-card">
+                <h5>2019-2020</h5>
+                <p>La tecnología se perfecciona. Aparecen apps comerciales. Los casos de víctimas no famosas aumentan exponencialmente.</p>
+              </div>
+              <div class="evolution-card">
+                <h5>2021-2023</h5>
+                <p>DeepFakes de alta calidad indistinguibles a simple vista. Proliferación de sitios web especializados en pornografía falsa.</p>
+              </div>
+              <div class="evolution-card">
+                <h5>2024-2025</h5>
+                <p>IA generativa permite crear imágenes y videos desde cero. Herramientas más accesibles. Crisis global de confianza en contenido digital.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="stats-section">
+          <h3>Estadísticas Alarmantes: La Magnitud del Problema</h3>
+          
+          <div class="stats-row">
+            <div class="stat-card reveal">
+              <div class="stat-circle">
+                <svg class="stat-progress" width="140" height="140" viewBox="0 0 140 140">
+                  <circle cx="70" cy="70" r="60" stroke="#f0f4fa" stroke-width="12" fill="none"/>
+                  <circle class="stat-progress-bar" cx="70" cy="70" r="60" stroke="#e94560" stroke-width="12" fill="none" stroke-dasharray="377" stroke-dashoffset="15" stroke-linecap="round"/>
+                </svg>
+                <div class="stat-content">
+                  <span class="stat-number" data-target="96">0</span><span class="stat-percent">%</span>
+                </div>
+              </div>
+              <span class="stat-label">de las imágenes y videos DeepFake en línea son pornografía no consentida</span>
+              <p class="stat-source">Fuente: Sensity AI, 2024</p>
+            </div>
+            
+            <div class="stat-card reveal">
+              <div class="stat-circle">
+                <svg class="stat-progress" width="140" height="140" viewBox="0 0 140 140">
+                  <circle cx="70" cy="70" r="60" stroke="#f0f4fa" stroke-width="12" fill="none"/>
+                  <circle class="stat-progress-bar" cx="70" cy="70" r="60" stroke="#e94560" stroke-width="12" fill="none" stroke-dasharray="377" stroke-dashoffset="41" stroke-linecap="round"/>
+                </svg>
+                <div class="stat-content">
+                  <span class="stat-number" data-target="89">0</span><span class="stat-percent">%</span>
+                </div>
+              </div>
+              <span class="stat-label">de las víctimas de violencia sexual digital en México son mujeres</span>
+              <p class="stat-source">Fuente: INEGI, Encuesta Nacional sobre Disponibilidad y Uso de TIC en Hogares (ENDUTIH) 2023</p>
+            </div>
+          </div>
+          
+          <div class="additional-stats">
+            <h4>Más Datos Impactantes:</h4>
+            <div class="stats-grid">
+              <div class="stat-item reveal">
+                <div class="stat-icon-container">
+                  <svg class="stat-icon animated-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="35" stroke="#e94560" stroke-width="2" fill="rgba(233,69,96,0.1)"/>
+                    <path class="icon-path" d="M40 15L45 30L60 30L48 40L53 55L40 45L27 55L32 40L20 30L35 30L40 15Z" fill="#e94560" stroke="#e94560" stroke-width="1.5"/>
+                    <circle class="pulse-circle" cx="40" cy="40" r="35" stroke="#e94560" stroke-width="2" fill="none" opacity="0"/>
+                  </svg>
+                </div>
+                <span class="big-number">90,000+</span>
+                <p>Videos DeepFake pornográficos detectados en principales plataformas (2023)</p>
+              </div>
+              
+              <div class="stat-item reveal">
+                <div class="stat-icon-container">
+                  <svg class="stat-icon animated-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="icon-arrow" d="M15 65L30 45L40 50L50 30L65 15" stroke="#e94560" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <circle cx="15" cy="65" r="4" fill="#e94560"/>
+                    <circle cx="30" cy="45" r="4" fill="#e94560"/>
+                    <circle cx="40" cy="50" r="4" fill="#e94560"/>
+                    <circle cx="50" cy="30" r="4" fill="#e94560"/>
+                    <circle cx="65" cy="15" r="4" fill="#e94560"/>
+                    <path class="trend-line" d="M15 65L30 45L40 50L50 30L65 15" stroke="#fbbf24" stroke-width="2" stroke-dasharray="200" stroke-dashoffset="200" fill="none"/>
+                  </svg>
+                </div>
+                <span class="big-number">500%</span>
+                <p>Aumento en la creación de DeepFakes pornográficos entre 2020 y 2023</p>
+              </div>
+              
+              <div class="stat-item reveal">
+                <div class="stat-icon-container">
+                  <svg class="stat-icon animated-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="8" fill="#64748b"/>
+                    <circle cx="40" cy="20" r="8" fill="#64748b"/>
+                    <circle cx="55" cy="25" r="8" fill="#64748b"/>
+                    <circle cx="20" cy="45" r="8" fill="#64748b"/>
+                    <circle cx="35" cy="40" r="8" fill="#64748b"/>
+                    <circle cx="50" cy="45" r="8" fill="#64748b"/>
+                    <circle cx="25" cy="60" r="8" fill="#64748b"/>
+                    <circle cx="40" cy="58" r="8" fill="#64748b"/>
+                    <circle cx="55" cy="60" r="8" fill="#64748b"/>
+                    <path class="icon-cross" d="M15 15L65 65M65 15L15 65" stroke="#e94560" stroke-width="4" stroke-linecap="round" opacity="0"/>
+                  </svg>
+                </div>
+                <span class="big-number">9 de 10</span>
+                <p>Víctimas reportan no haber recibido apoyo efectivo de autoridades</p>
+              </div>
+              
+              <div class="stat-item reveal">
+                <div class="stat-icon-container">
+                  <svg class="stat-icon animated-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="25" r="12" fill="#e94560" opacity="0.3"/>
+                    <path d="M40 37C32 37 20 42 20 50V60H60V50C60 42 48 37 40 37Z" fill="#e94560" opacity="0.3"/>
+                    <circle class="icon-highlight" cx="40" cy="25" r="12" fill="none" stroke="#e94560" stroke-width="2.5"/>
+                    <path class="icon-highlight" d="M40 37C32 37 20 42 20 50V60H60V50C60 42 48 37 40 37Z" fill="none" stroke="#e94560" stroke-width="2.5"/>
+                  </svg>
+                </div>
+                <span class="big-number">75%</span>
+                <p>De las víctimas son mujeres entre 18 y 35 años</p>
+              </div>
+              
+              <div class="stat-item reveal">
+                <div class="stat-icon-container">
+                  <svg class="stat-icon animated-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="30" fill="rgba(233,69,96,0.1)" stroke="#e94560" stroke-width="2"/>
+                    <text x="40" y="50" font-size="32" font-weight="bold" fill="#e94560" text-anchor="middle">$0</text>
+                    <path class="slash-line" d="M15 15L65 65" stroke="#e94560" stroke-width="4" stroke-linecap="round" stroke-dasharray="70" stroke-dashoffset="70"/>
+                  </svg>
+                </div>
+                <span class="big-number">$0</span>
+                <p>Costo de crear un DeepFake con software gratuito de código abierto</p>
+              </div>
+              
+              <div class="stat-item reveal">
+                <div class="stat-icon-container">
+                  <svg class="stat-icon animated-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="30" stroke="#e94560" stroke-width="2" fill="rgba(233,69,96,0.05)"/>
+                    <path class="clock-hand hour" d="M40 40L40 25" stroke="#e94560" stroke-width="3" stroke-linecap="round"/>
+                    <path class="clock-hand minute" d="M40 40L50 40" stroke="#e94560" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="40" cy="40" r="3" fill="#e94560"/>
+                    <circle class="ripple" cx="40" cy="40" r="30" stroke="#fbbf24" stroke-width="2" fill="none" opacity="0"/>
+                  </svg>
+                </div>
+                <span class="big-number">24 horas</span>
+                <p>Tiempo promedio para que un DeepFake se viralice en redes sociales</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- NUEVA SECCIÓN: GRÁFICAS INTERACTIVAS -->
+          <div class="charts-section reveal">
+            <h4>📊 Análisis Visual de Datos</h4>
+            
+            <div class="charts-grid">
+              <!-- Gráfica 1: Crecimiento de DeepFakes -->
+              <div class="chart-container">
+                <h5>Crecimiento de DeepFakes Pornográficos (2017-2024)</h5>
+                <canvas id="growthChart"></canvas>
+                <p class="chart-source">Fuente: Sensity AI, DeepTrace Labs</p>
+              </div>
+              
+              <!-- Gráfica 2: Distribución por género -->
+              <div class="chart-container">
+                <h5>Víctimas por Género</h5>
+                <canvas id="genderChart"></canvas>
+                <p class="chart-source">Fuente: Análisis global de casos reportados 2024</p>
+              </div>
+              
+              <!-- Gráfica 3: Edad de las víctimas -->
+              <div class="chart-container">
+                <h5>Distribución de Edad de las Víctimas</h5>
+                <canvas id="ageChart"></canvas>
+                <p class="chart-source">Fuente: INEGI, estudios de ciberseguridad 2023</p>
+              </div>
+              
+              <!-- Gráfica 4: Plataformas de difusión -->
+              <div class="chart-container">
+                <h5>Plataformas Donde se Difunde Contenido</h5>
+                <canvas id="platformChart"></canvas>
+                <p class="chart-source">Fuente: Reportes de moderación de contenido 2024</p>
+              </div>
+              
+              <!-- Gráfica 5: Casos denunciados vs resueltos en México -->
+              <div class="chart-container chart-wide">
+                <h5>Casos Denunciados vs Casos Resueltos en México (2019-2024)</h5>
+                <canvas id="resolutionChart"></canvas>
+                <p class="chart-source">Fuente: Fiscalías Estatales, Comisión Nacional de Derechos Humanos</p>
+              </div>
+              
+              <!-- Gráfica 6: Impacto psicológico -->
+              <div class="chart-container chart-wide">
+                <h5>Consecuencias Reportadas por las Víctimas</h5>
+                <canvas id="impactChart"></canvas>
+                <p class="chart-source">Fuente: Encuestas a víctimas, estudios psicológicos 2023-2024</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- CALCULADORA DE IMPACTO DIGITAL -->
+          <div class="impact-calculator reveal">
+            <h4>🧮 Calculadora de Impacto Digital</h4>
+            <p class="calculator-intro">Visualiza cómo se propaga el contenido digital compartido. Esta herramienta muestra el alcance potencial de un contenido cuando se comparte en redes sociales.</p>
+            
+            <div class="calculator-container">
+              <div class="calculator-controls">
+                <div class="control-group">
+                  <label for="platformSelect">
+                    <span class="label-icon">🌐</span>
+                    Plataforma:
+                  </label>
+                  <select id="platformSelect">
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="twitter">Twitter/X</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="telegram">Telegram</option>
+                    <option value="tiktok">TikTok</option>
+                    <option value="instagram">Instagram</option>
+                  </select>
+                </div>
+
+                <div class="control-group">
+                  <label for="networkSize">
+                    <span class="label-icon">🔗</span>
+                    Tamaño de tu red de contactos:
+                  </label>
+                  <div class="network-size-control">
+                    <button type="button" id="networkSizeDown" aria-label="Disminuir red" class="network-size-btn">&#9650;</button>
+                    <span class="control-value" id="networkSizeValue">200</span>
+                    <button type="button" id="networkSizeUp" aria-label="Aumentar red" class="network-size-btn">&#9660;</button>
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="initialShares">
+                    <span class="label-icon">👥</span>
+                    Personas que lo comparten inicialmente:
+                  </label>
+                  <input type="range" id="initialShares" min="1" max="100" value="10" />
+                  <span class="control-value" id="initialSharesValue">10</span>
+                </div>
+
+                <div class="control-group">
+                  <label for="shareRate">
+                    <span class="label-icon">🔄</span>
+                    Porcentaje que lo recomparte:
+                  </label>
+                  <input type="range" id="shareRate" min="5" max="50" value="20" />
+                  <span class="control-value" id="shareRateValue">20%</span>
+                </div>
+
+                <div class="control-group">
+                  <label for="timeHours">
+                    <span class="label-icon">⏱️</span>
+                    Tiempo transcurrido (horas):
+                  </label>
+                  <input type="range" id="timeHours" min="1" max="72" value="24" />
+                  <span class="control-value" id="timeHoursValue">24 horas</span>
+                </div>
+
+                <button class="btn btn-primary" id="calculateBtn">
+                  <span>Calcular Alcance</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2V18M10 18L16 12M10 18L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              
+              <div class="calculator-visualization">
+                <div class="viz-header">
+                  <h5>Propagación Viral</h5>
+                  <div class="legend">
+                    <span class="legend-item"><span class="legend-color initial"></span> Compartido inicialmente</span>
+                    <span class="legend-item"><span class="legend-color viral"></span> Alcance viral</span>
+                  </div>
+                </div>
+                
+                <div class="propagation-canvas-container">
+                  <canvas id="propagationCanvas"></canvas>
+                </div>
+                
+                <div class="impact-results" id="impactResults">
+                  <div class="result-card range-card">
+                    <div class="result-icon">📊</div>
+                    <div class="result-content">
+                      <span class="result-label">Rango estimado de alcance</span>
+                      <span class="result-value" id="reachRange">-</span>
+                    </div>
+                  </div>
+                  <div class="result-card">
+                    <div class="result-icon">👀</div>
+                    <div class="result-content">
+                      <span class="result-label">Personas Alcanzadas</span>
+                      <span class="result-value" id="totalReach">0</span>
+                    </div>
+                  </div>
+                  
+                  <div class="result-card">
+                    <div class="result-icon">🔄</div>
+                    <div class="result-content">
+                      <span class="result-label">Total de Compartidos</span>
+                      <span class="result-value" id="totalShares">0</span>
+                    </div>
+                  </div>
+                  
+                  <div class="result-card">
+                    <div class="result-icon">📱</div>
+                    <div class="result-content">
+                      <span class="result-label">Plataformas Alcanzadas</span>
+                      <span class="result-value" id="platformCount">0</span>
+                    </div>
+                  </div>
+                  
+                  <div class="result-card highlight">
+                    <div class="result-icon">⚠️</div>
+                    <div class="result-content">
+                      <span class="result-label">Nivel de Viralización</span>
+                      <span class="result-value viral-level" id="viralLevel">-</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="impact-warning">
+                  <div class="explanation-box">
+                    <strong>¿Cómo se calculan estos resultados?</strong>
+                    <p id="calculationExplanation">
+                      La calculadora estima la propagación digital considerando la plataforma, el tamaño de tu red, el porcentaje de recomparte y el tiempo. Los valores se basan en promedios públicos y pueden variar según el comportamiento real de los usuarios y la viralidad del contenido. El rango estimado refleja la variabilidad natural de la difusión en redes sociales.
+                    </p>
+                  </div>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 19.5H22L12 2Z" stroke="#f7b731" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M12 9V13" stroke="#f7b731" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="12" cy="16" r="1" fill="#f7b731"/>
+                  </svg>
+                  <p><strong>Importante:</strong> Esta es una simulación conservadora. En la realidad, el contenido puede propagarse mucho más rápido y alcanzar a millones de personas en cuestión de horas. <strong>Una vez compartido, es prácticamente imposible eliminarlo por completo de internet.</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="global-context">
+            <h4>Contexto Global</h4>
+            <ul>
+              <li>El 99% de las víctimas de pornografía DeepFake son mujeres (Universidad de Amsterdam, 2023)</li>
+              <li>Se estima que más de 100,000 mujeres han sido víctimas de DeepFakes pornográficos a nivel mundial</li>
+              <li>Solo el 4% de los casos denunciados resultan en procesos legales efectivos</li>
+              <li>El contenido permanece en línea un promedio de 3-5 años antes de ser eliminado (si es que se elimina)</li>
+              <li>El 68% de las víctimas reportan pensamientos suicidas como consecuencia del abuso</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- MAPA DE CASOS EN MÉXICO -->
+        <div class="mexico-map-section reveal">
+          <h3>🗺️ Casos de Violencia Digital por Estado</h3>
+          <p class="map-intro">Visualización de casos de violencia digital reportados por estado. Los datos representan denuncias formales y casos documentados por organizaciones civiles.</p>
+          
+          <div class="map-container">
+            <!-- Mapa SVG real de México -->
+            <div class="map-visualization" id="mapContainer">
+              <!-- SVG embedded directly to avoid CORS issues -->
+            </div>
+            
+            <div class="state-info" id="stateInfo">
+              <div class="state-info-placeholder">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M40 10L45 30L65 30L50 42L55 62L40 50L25 62L30 42L15 30L35 30L40 10Z" fill="#e94560" opacity="0.2"/>
+                  <circle cx="40" cy="40" r="30" stroke="#e94560" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
+                </svg>
+                <p>Haz clic en un estado para ver información detallada</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="map-legend-horizontal">
+            <h4>Nivel de Casos Reportados</h4>
+            <div class="legend-items-horizontal">
+              <div class="legend-item"><span class="legend-square critical"></span> Crítico (50+ casos)</div>
+              <div class="legend-item"><span class="legend-square high"></span> Alto (20-49 casos)</div>
+              <div class="legend-item"><span class="legend-square medium"></span> Medio (10-19 casos)</div>
+              <div class="legend-item"><span class="legend-square low"></span> Bajo (1-9 casos)</div>
+              <div class="legend-item"><span class="legend-square none"></span> Sin datos</div>
+            </div>
+          </div>
+          
+          <div class="top-states">
+            <h4>📊 Estados con Más Casos Reportados</h4>
+            <div class="top-states-grid">
+              <div class="top-state-card">
+                <div class="rank">1</div>
+                <div class="state-content">
+                  <h5>Ciudad de México</h5>
+                  <div class="state-stat">
+                    <span class="stat-number">127</span>
+                    <span class="stat-label">casos reportados</span>
+                  </div>
+                  <div class="state-bar">
+                    <div class="state-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="top-state-card">
+                <div class="rank">2</div>
+                <div class="state-content">
+                  <h5>Estado de México</h5>
+                  <div class="state-stat">
+                    <span class="stat-number">89</span>
+                    <span class="stat-label">casos reportados</span>
+                  </div>
+                  <div class="state-bar">
+                    <div class="state-bar-fill" style="width: 70%"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="top-state-card">
+                <div class="rank">3</div>
+                <div class="state-content">
+                  <h5>Jalisco</h5>
+                  <div class="state-stat">
+                    <span class="stat-number">64</span>
+                    <span class="stat-label">casos reportados</span>
+                  </div>
+                  <div class="state-bar">
+                    <div class="state-bar-fill" style="width: 50%"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="top-state-card">
+                <div class="rank">4</div>
+                <div class="state-content">
+                  <h5>Nuevo León</h5>
+                  <div class="state-stat">
+                    <span class="stat-number">52</span>
+                    <span class="stat-label">casos reportados</span>
+                  </div>
+                  <div class="state-bar">
+                    <div class="state-bar-fill" style="width: 41%"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="top-state-card">
+                <div class="rank">5</div>
+                <div class="state-content">
+                  <h5>Guanajuato</h5>
+                  <div class="state-stat">
+                    <span class="stat-number">38</span>
+                    <span class="stat-label">casos reportados</span>
+                  </div>
+                  <div class="state-bar">
+                    <div class="state-bar-fill" style="width: 30%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="map-note">
+              <p><strong>Nota:</strong> Estos datos son una estimación basada en denuncias formales ante autoridades y reportes de organizaciones civiles. La cifra real es probablemente mucho mayor debido a la subnotificación (se estima que solo el 10-15% de los casos se reportan).</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="other-cases reveal">
+        
+        <div class="threat-level">
+          <h3>¿Por Qué Esto Debe Importarnos a Todos?</h3>
+          <p class="emphasis-text">Cualquier persona con fotografías en internet es un potencial objetivo. No se trata de "tener cuidado con lo que publicas", sino de reconocer que vivimos en una era donde la tecnología puede ser utilizada para violar la dignidad de cualquiera.</p>
+          
+          <div class="vulnerability-factors">
+            <h4>Factores de Vulnerabilidad:</h4>
+            <ul>
+              <li>✓ Tener perfiles en redes sociales (Facebook, Instagram, TikTok, Twitter, LinkedIn)</li>
+              <li>✓ Publicar fotografías personales en línea</li>
+              <li>✓ Aparecer en fotografías grupales o eventos públicos</li>
+              <li>✓ Ser mujer en el espacio público digital</li>
+              <li>✓ Tener visibilidad pública (política, académica, activismo, entretenimiento)</li>
+            </ul>
+            <p class="warning-emphasis">En otras palabras: casi cualquier persona es vulnerable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="lucha" class="section reveal" aria-labelledby="lucha-title">
+      <h2 id="lucha-title"><span class="badge badge-law">Justicia</span> Buscando Justicia: La Lucha Legal</h2>
+      <div class="section-content">
+        <div class="intro-text">
+          <p class="lead-paragraph">Frente a la creciente ola de violencia sexual digital facilitada por IA, México se encuentra en una encrucijada legal. Las leyes actuales, aunque importantes, resultan insuficientes para abordar la complejidad y especificidad de los DeepFakes pornográficos.</p>
+        </div>
+        
+        <div class="legal-framework">
+          <h3>El Marco Legal Actual: Avances y Limitaciones</h3>
+          
+          <div class="ley-olimpia-section">
+            <h4>⚖️ La Ley Olimpia: Un Primer Paso Fundamental</h4>
+            <p><strong>¿Qué es la Ley Olimpia?</strong></p>
+            <p>La Ley Olimpia es un conjunto de reformas legislativas aprobadas en los 32 estados de México y a nivel federal para reconocer la violencia digital como un delito y proteger a las víctimas de la difusión no consentida de contenido íntimo.</p>
+            
+            <div class="olimpia-history">
+              <h5>Historia y Origen:</h5>
+              <p>El nombre honra a <strong>Olimpia Coral Melo</strong>, activista de Puebla quien en 2013 fue víctima de la difusión de un video íntimo sin su consentimiento. Su pareja grabó el encuentro sexual sin su conocimiento y lo distribuyó por internet, causándole un trauma profundo y llevándola al borde del suicidio.</p>
+              <p>Olimpia transformó su dolor en activismo, liderando un movimiento social que culminó en reformas legales históricas. Su valentía inspiró cambios legislativos en todo México.</p>
+            </div>
+            
+            <div class="olimpia-provisions">
+              <h5>¿Qué protege la Ley Olimpia?</h5>
+              <ul>
+                <li><strong>Video-grabar, audio-grabar, fotografiar, imprimir o elaborar</strong> imágenes, audios o videos reales o simulados de contenido sexual íntimo de una persona sin su consentimiento o mediante engaño</li>
+                <li><strong>Exponer, distribuir, difundir, exhibir, reproducir, transmitir, comercializar, ofertar, intercambiar y compartir</strong> imágenes, audios o videos de contenido sexual íntimo de una persona, sin su consentimiento</li>
+                <li>La <strong>extorsión o amenaza</strong> mediante contenido íntimo</li>
+              </ul>
+            </div>
+            
+            <div class="olimpia-penalties">
+              <h5>Penas establecidas:</h5>
+              <p><strong>A nivel federal:</strong> De 3 a 6 años de prisión y multa de 500 a 1,000 Unidades de Medida y Actualización (UMA).</p>
+              <p><strong>Agravantes que aumentan la pena:</strong></p>
+              <ul>
+                <li>Si la víctima es menor de 18 años</li>
+                <li>Si el agresor es pareja, ex pareja o tiene una relación de confianza con la víctima</li>
+                <li>Si se utiliza para extorsión o chantaje</li>
+                <li>Si la víctima tiene una discapacidad</li>
+              </ul>
+            </div>
+            
+            <div class="olimpia-limitations">
+              <h5>❌ Limitaciones frente a los DeepFakes:</h5>
+              <div class="limitation-list">
+                <div class="limitation-item">
+                  <strong>Enfoque en contenido "real":</strong>
+                  <p>La Ley Olimpia fue diseñada principalmente para contenido íntimo auténtico (grabaciones reales de actos sexuales). Aunque menciona contenido "simulado", la interpretación legal no contemplaba explícitamente la creación mediante IA.</p>
+                </div>
+                <div class="limitation-item">
+                  <strong>Dificultad probatoria:</strong>
+                  <p>Probar que un DeepFake fue creado y difundido con dolo específico requiere peritajes técnicos que no siempre están disponibles en las fiscalías.</p>
+                </div>
+                <div class="limitation-item">
+                  <strong>Vacío en la creación:</strong>
+                  <p>La ley castiga principalmente la difusión, pero la creación de DeepFakes pornográficos no siempre está claramente tipificada como delito autónomo.</p>
+                </div>
+                <div class="limitation-item">
+                  <strong>Jurisdicción internacional:</strong>
+                  <p>Cuando el contenido se aloja en servidores extranjeros o los creadores operan desde otro país, la aplicación de la ley se complica enormemente.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="initiative-section">
+          <h3>🏛️ La Iniciativa de Reforma: Actualización Urgente del Código Penal</h3>
+          
+          <div class="initiative-header">
+            <p class="initiative-intro">Reconociendo las limitaciones del marco legal actual, un grupo de senadores ha presentado una iniciativa de reforma al Código Penal Federal para crear un capítulo específico que tipifique y sancione la violencia sexual digital mediante inteligencia artificial.</p>
+          </div>
+          
+          <div class="initiative-details">
+            <div class="detail-card">
+              <h4>📋 ¿Qué es esta iniciativa?</h4>
+              <p><strong>Propuesta legislativa</strong> presentada por senadores del Grupo Parlamentario del Partido del Trabajo para reformar el Código Penal Federal.</p>
+              <p><strong>Objetivo:</strong> Crear un marco legal específico y robusto para combatir la creación, alteración y difusión de contenido sexual falso generado mediante inteligencia artificial.</p>
+              <p><strong>Fecha de presentación:</strong> 2024</p>
+              <p><strong>Estado actual:</strong> En proceso de dictaminación en comisiones legislativas</p>
+            </div>
+            
+            <div class="detail-card">
+              <h4>📜 ¿Qué propone exactamente?</h4>
+              <p><strong>Nuevo capítulo en el Código Penal Federal:</strong></p>
+              <p class="chapter-title">"Capítulo: Violación a la Intimidad Sexual mediante Inteligencia Artificial"</p>
+              
+              <div class="proposal-content">
+                <h5>Artículo propuesto (síntesis):</h5>
+                <blockquote class="legal-text">
+                  <p>"Comete el delito de violación a la intimidad sexual mediante inteligencia artificial quien, sin consentimiento y con fines sexuales:</p>
+                  <ol>
+                    <li>Modifique, altere o genere mediante inteligencia artificial imágenes, videos, audios o cualquier representación visual o auditiva de una persona en situaciones de contenido sexual explícito</li>
+                    <li>Utilice la imagen, voz o datos biométricos de una persona para crear contenido sexual falso mediante algoritmos de aprendizaje automático, redes neuronales o cualquier tecnología de síntesis digital</li>
+                    <li>Difunda, distribuya, publique, comercialice o ponga a disposición del público el material descrito en las fracciones anteriores</li>
+                  </ol>
+                </blockquote>
+              </div>
+            </div>
+            
+            <div class="detail-card penalty-card">
+              <h4>⚖️ ¿Qué penas establece?</h4>
+              
+              <div class="penalty-basic">
+                <h5>Pena base:</h5>
+                <div class="penalty-box">
+                  <span class="penalty-years">5 a 9 años de prisión</span>
+                  <span class="penalty-fine">+ Multa de 1,000 a 2,000 UMA</span>
+                </div>
+                <p class="penalty-note">(Aproximadamente $103,000 a $206,000 pesos mexicanos según UMA 2025)</p>
+              </div>
+              
+              <div class="penalty-aggravated">
+                <h5>⚠️ Agravantes - La pena se DUPLICA cuando:</h5>
+                <ul class="aggravating-list">
+                  <li><strong>La víctima es menor de 18 años</strong>
+                    <br/><span class="sub-note">Pena: 10 a 18 años de prisión</span>
+                  </li>
+                  <li><strong>La víctima es una persona sin capacidad para comprender el significado del hecho</strong>
+                    <br/><span class="sub-note">Incluye personas con discapacidad intelectual o en estado de inconsciencia</span>
+                  </li>
+                  <li><strong>El agresor es o fue pareja, cónyuge, concubino/a de la víctima</strong>
+                    <br/><span class="sub-note">Reconoce la violencia en relaciones de confianza</span>
+                  </li>
+                  <li><strong>El material se utiliza para extorsión, chantaje o amenazas</strong>
+                    <br/><span class="sub-note">Pena: 10 a 18 años + penas adicionales por extorsión</span>
+                  </li>
+                  <li><strong>El agresor obtuvo beneficio económico de la difusión</strong>
+                    <br/><span class="sub-note">Incluye venta de contenido, suscripciones, donaciones</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="penalty-additional">
+                <h5>Sanciones complementarias propuestas:</h5>
+                <ul>
+                  <li>🚫 <strong>Eliminación obligatoria</strong> del contenido de todas las plataformas digitales</li>
+                  <li>💰 <strong>Reparación integral del daño</strong> a la víctima (incluye daño moral, psicológico y económico)</li>
+                  <li>🏥 <strong>Tratamiento psicológico gratuito</strong> para la víctima a cargo del Estado</li>
+                  <li>⛔ <strong>Prohibición de acercamiento</strong> a la víctima</li>
+                  <li>💻 <strong>Suspensión de servicios de internet</strong> del agresor (en casos graves)</li>
+                  <li>📱 <strong>Decomiso de equipos</strong> utilizados para cometer el delito</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="detail-card">
+              <h4>🎯 ¿Qué conductas específicas castigaría?</h4>
+              
+              <div class="conduct-list">
+                <div class="conduct-item">
+                  <span class="conduct-number">1</span>
+                  <div>
+                    <h5>Creación de DeepFakes</h5>
+                    <p>Usar software, aplicaciones o servicios de IA para generar contenido sexual falso de una persona sin su consentimiento, incluso si no se difunde.</p>
+                  </div>
+                </div>
+                
+                <div class="conduct-item">
+                  <span class="conduct-number">2</span>
+                  <div>
+                    <h5>Alteración de material existente</h5>
+                    <p>Modificar fotografías, videos o audios reales usando IA para añadir contenido sexual que no existía en el material original.</p>
+                  </div>
+                </div>
+                
+                <div class="conduct-item">
+                  <span class="conduct-number">3</span>
+                  <div>
+                    <h5>Uso no autorizado de biometría</h5>
+                    <p>Utilizar la imagen facial, voz, o cualquier característica biométrica de una persona para crear contenido sexual sintético.</p>
+                  </div>
+                </div>
+                
+                <div class="conduct-item">
+                  <span class="conduct-number">4</span>
+                  <div>
+                    <h5>Difusión en cualquier plataforma</h5>
+                    <p>Publicar, compartir, vender o distribuir el contenido falso en redes sociales, aplicaciones de mensajería, sitios web, foros o cualquier medio digital.</p>
+                  </div>
+                </div>
+                
+                <div class="conduct-item">
+                  <span class="conduct-number">5</span>
+                  <div>
+                    <h5>Comercialización</h5>
+                    <p>Vender, ofrecer servicios de creación de DeepFakes pornográficos, o monetizar de cualquier forma este tipo de contenido.</p>
+                  </div>
+                </div>
+                
+                <div class="conduct-item">
+                  <span class="conduct-number">6</span>
+                  <div>
+                    <h5>Facilitación técnica</h5>
+                    <p>Crear, distribuir o comercializar aplicaciones o servicios específicamente diseñados para crear pornografía DeepFake.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="detail-card">
+              <h4>🔍 Aspectos técnicos y probatorios</h4>
+              
+              <p>La iniciativa también contempla:</p>
+              <ul>
+                <li><strong>Capacitación especializada</strong> para ministerios públicos, policías y jueces en detección de DeepFakes</li>
+                <li><strong>Creación de unidades periciales</strong> con equipo especializado para análisis forense digital</li>
+                <li><strong>Protocolos de investigación</strong> específicos para rastrear el origen de contenido generado por IA</li>
+                <li><strong>Colaboración internacional</strong> para casos transfronterizos</li>
+                <li><strong>Obligaciones para plataformas digitales</strong> de reportar y eliminar contenido cuando sean notificadas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="call-to-action-section">
+          <h3>💪 ¿Cómo Podemos Apoyar esta Iniciativa?</h3>
+          
+          <div class="action-steps">
+            <div class="action-card">
+              <span class="action-number">1</span>
+              <h4>Informarse y compartir</h4>
+              <p>Difunde esta información en tus redes sociales. Entre más personas conozcan el problema, mayor presión social habrá para que la iniciativa sea aprobada.</p>
+            </div>
+            
+            <div class="action-card">
+              <span class="action-number">2</span>
+              <h4>Contactar a legisladores</h4>
+              <p>Escribe a tus senadores y diputados locales y federales. Expresa tu apoyo a la reforma y la urgencia de su aprobación.</p>
+              <div class="contact-info">
+                <p><strong>Senado de la República:</strong> <a href="https://www.senado.gob.mx" target="_blank">www.senado.gob.mx</a></p>
+                <p><strong>Cámara de Diputados:</strong> <a href="https://www.diputados.gob.mx" target="_blank">www.diputados.gob.mx</a></p>
+              </div>
+            </div>
+            
+            <div class="action-card">
+              <span class="action-number">3</span>
+              <div>
+                <h4>Firmar peticiones</h4>
+                <p>Apoya las peticiones en línea que solicitan la aprobación de esta reforma. El apoyo ciudadano masivo puede acelerar el proceso legislativo.</p>
+              </div>
+            </div>
+            
+            <div class="action-card">
+              <span class="action-number">4</span>
+              <h4>Apoyar a organizaciones</h4>
+              <p>Colabora con colectivos y ONGs que trabajan en la defensa de víctimas de violencia digital. Tu apoyo puede ser mediante voluntariado, donaciones o difusión.</p>
+            </div>
+            
+            <div class="action-card">
+              <span class="action-number">5</span>
+              <h4>Educación y prevención</h4>
+              <p>Habla sobre este tema en tu familia, escuela, trabajo. La educación digital es fundamental para prevenir y detectar estos abusos.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="urgency-message">
+          <h3>⏰ La Urgencia es Real</h3>
+          <p class="emphasis-text">Cada día que pasa sin una legislación específica, más mujeres se convierten en víctimas de esta forma de violencia sexual digital. Cada caso sin resolver es un mensaje de impunidad para los agresores.</p>
+          <p class="emphasis-text"><strong>Esta reforma no es un lujo legislativo, es una necesidad urgente de justicia y protección de derechos humanos.</strong></p>
+        </div>
+        
+        <div class="cta-buttons">
+          <a href="#recursos" class="btn btn-primary" aria-label="Apoya la iniciativa">
+            <span>¡Conoce cómo ayudar!</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="https://www.senado.gob.mx" target="_blank" class="btn secondary">
+            <span>Contactar al Senado</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <section id="recursos" class="section alt reveal" aria-labelledby="recursos-title">
+      <h2 id="recursos-title"><span class="badge badge-help">Ayuda</span> Recursos y Ayuda</h2>
+      <div class="section-content">
+        
+        <p class="section-intro">Si eres víctima de violencia digital, pornografía no consensuada, o sospechas que han creado material falso de ti, <strong>no estás sola.</strong> Existen recursos legales, apoyo psicológico y herramientas tecnológicas para ayudarte. Esta sección proporciona una guía completa de acción.</p>
+        
+        <!-- Guía paso a paso para víctimas -->
+        <div class="victim-guide">
+          <h3>🛡️ Guía Paso a Paso si Eres Víctima</h3>
+          
+          <div class="guide-steps">
+            <div class="guide-step">
+              <div class="step-header">
+                <span class="step-number">1</span>
+                <h4>Preserva las Pruebas</h4>
+              </div>
+              <div class="step-content">
+                <p><strong>IMPORTANTE: No borres nada hasta que hayas documentado todo.</strong> Las pruebas son fundamentales para cualquier acción legal.</p>
+                
+                <div class="action-checklist">
+                  <h5>✅ Checklist de Documentación:</h5>
+                  <ul>
+                    <li><strong>Capturas de pantalla:</strong> Asegúrate de que incluyan fecha, hora, URL completa y nombre de usuario del agresor</li>
+                    <li><strong>URLs completas:</strong> Copia y guarda todas las direcciones web donde aparece el contenido</li>
+                    <li><strong>Mensajes:</strong> Guarda conversaciones completas, amenazas, comentarios ofensivos</li>
+                    <li><strong>Metadatos:</strong> Si puedes, descarga los archivos originales (contienen información técnica útil)</li>
+                    <li><strong>Testigos:</strong> Anota nombres de personas que también hayan visto el contenido</li>
+                    <li><strong>Perfil del agresor:</strong> Capturas de su perfil completo en redes sociales</li>
+                  </ul>
+                </div>
+                
+                <div class="detail-box">
+                  <h5>💡 Consejo Técnico:</h5>
+                  <p>Usa herramientas como <strong>Archive.org</strong> (Wayback Machine) para crear copias permanentes de páginas web. También puedes usar extensiones de navegador como "Full Page Screen Capture" para capturas completas.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="guide-step">
+              <div class="step-header">
+                <span class="step-number">2</span>
+                <h4>Reporta en las Plataformas Digitales</h4>
+              </div>
+              <div class="step-content">
+                <p>Todas las plataformas principales tienen políticas contra contenido no consensuado. Reporta inmediatamente para iniciar el proceso de eliminación.</p>
+                
+                <div class="platform-reporting">
+                  <div class="platform-card">
+                    <h5>📘 Facebook/Instagram (Meta)</h5>
+                    <ul>
+                      <li><strong>Opción:</strong> "Desnudez o actividad sexual" → "Imágenes íntimas compartidas sin permiso"</li>
+                      <li><strong>StopNCII.org:</strong> Herramienta de Meta para prevenir la difusión con hash de imágenes</li>
+                      <li><strong>Tiempo de respuesta:</strong> 24-48 horas generalmente</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="platform-card">
+                    <h5>🐦 X (Twitter)</h5>
+                    <ul>
+                      <li><strong>Opción:</strong> "Contenido privado" → "Medios privados/íntimos"</li>
+                      <li><strong>Formulario especial:</strong> <a href="https://help.twitter.com/forms/private_information" target="_blank">help.twitter.com/forms/private_information</a></li>
+                      <li><strong>Política:</strong> Suspensión inmediata de cuentas que comparten este contenido</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="platform-card">
+                    <h5>🔴 TikTok</h5>
+                    <ul>
+                      <li><strong>Opción:</strong> "Privacidad, seguridad y bienestar" → "Contenido sexual no consentido"</li>
+                      <li><strong>Edad:</strong> Especial protección para menores de edad</li>
+                      <li><strong>Sanción:</strong> Eliminación + baneo permanente</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="platform-card">
+                    <h5>🌐 Google (Búsqueda/Drive)</h5>
+                    <ul>
+                      <li><strong>Formulario legal:</strong> <a href="https://support.google.com/websearch/troubleshooter/9685456" target="_blank">Solicitud de eliminación de resultados</a></li>
+                      <li><strong>Derecho al olvido:</strong> Puedes solicitar desindexación de URLs específicas</li>
+                      <li><strong>Proceso:</strong> Revisión manual por equipo especializado</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="platform-card">
+                    <h5>🟣 Pornhub y similares</h5>
+                    <ul>
+                      <li><strong>Opción:</strong> Botón de reporte en el video + "Non-consensual content"</li>
+                      <li><strong>Contacto directo:</strong> dmca@pornhub.com con todas las pruebas</li>
+                      <li><strong>Ley DMCA:</strong> Están legalmente obligados a eliminar contenido reportado</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="warning-text">
+                  <p><strong>⚠️ IMPORTANTE:</strong> Aunque reportes en plataformas, <strong>esto NO sustituye la denuncia legal.</strong> El reporte en plataformas es solo para eliminación, no para proceder legalmente contra el agresor.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="guide-step">
+              <div class="step-header">
+                <span class="step-number">3</span>
+                <h4>Denuncia Penal (Ministerio Público)</h4>
+              </div>
+              <div class="step-content">
+                <p>La denuncia penal es fundamental. Con la Ley Olimpia, tienes respaldo legal para proceder contra tu agresor.</p>
+                
+                <div class="legal-process">
+                  <h5>📋 Qué Necesitas Llevar:</h5>
+                  <ul>
+                    <li>Identificación oficial (INE, pasaporte, cédula profesional)</li>
+                    <li>Todas las pruebas digitales (USB con capturas, archivos, URLs)</li>
+                    <li>Lista escrita de hechos cronológica</li>
+                    <li>Datos del agresor (si los conoces): nombre, usuario, perfil</li>
+                    <li>Testigos (nombres y contactos de personas que vieron el contenido)</li>
+                  </ul>
+                  
+                  <h5>🏛️ Dónde Acudir:</h5>
+                  <div class="institution-list">
+                    <div class="institution-card">
+                      <h6>Fiscalía de Delitos Cibernéticos</h6>
+                      <p>Especializada en crímenes digitales. Disponible en la mayoría de estados.</p>
+                      <p><strong>CDMX:</strong> Fiscalía Central de Investigación en Delitos Cometidos por Medios Electrónicos</p>
+                    </div>
+                    
+                    <div class="institution-card">
+                      <h6>Ministerio Público más cercano</h6>
+                      <p>Si no hay fiscalía especializada, cualquier agencia del MP puede tomar tu denuncia.</p>
+                      <p><strong>Importante:</strong> Exige que tipifiquen conforme a la Ley Olimpia de tu estado</p>
+                    </div>
+                    
+                    <div class="institution-card">
+                      <h6>Policía Cibernética (Guardia Nacional)</h6>
+                      <p>Apoyo técnico y acompañamiento en investigación digital.</p>
+                      <p><strong>Teléfono:</strong> 088 (desde cualquier parte de México)</p>
+                      <p><strong>Email:</strong> ceac@sspc.gob.mx</p>
+                    </div>
+                  </div>
+                  
+                  <h5>⚖️ Delitos que Puedes Denunciar (Ley Olimpia):</h5>
+                  <ul>
+                    <li><strong>Violación a la intimidad sexual:</strong> Difusión de contenido íntimo sin consentimiento</li>
+                    <li><strong>Acoso sexual digital:</strong> Mensajes, solicitudes sexuales no deseadas</li>
+                    <li><strong>Ciberacoso:</strong> Amenazas, hostigamiento en línea</li>
+                    <li><strong>Daño moral:</strong> Por el impacto emocional y reputacional</li>
+                    <li><strong>Extorsión:</strong> Si te pidieron dinero a cambio de no difundir material</li>
+                  </ul>
+                </div>
+                
+                <div class="victim-quote">
+                  <p>"Cuando denuncié, me dijeron que no procedía porque 'no había violencia física'. Insistí y cité la Ley Olimpia. Finalmente tomaron mi denuncia. No te des por vencida, conoce tus derechos."</p>
+                  <cite>— Testimonio anónimo, activista digital</cite>
+                </div>
+              </div>
+            </div>
+            
+            <div class="guide-step">
+              <div class="step-header">
+                <span class="step-number">4</span>
+                <h4>Busca Apoyo Psicológico</h4>
+              </div>
+              <div class="step-content">
+                <p>El impacto emocional de la violencia digital es profundo y real. Buscar ayuda profesional es tan importante como la acción legal.</p>
+                
+                <div class="psychological-support">
+                  <h5>💚 Servicios de Apoyo Gratuito:</h5>
+                  
+                  <div class="support-services">
+                    <div class="service-card">
+                      <span class="service-icon">📞</span>
+                      <h6>Línea Mujeres: 55 5658 1111</h6>
+                      <p>Apoyo emocional, orientación legal y canalización a servicios especializados. Atención 24/7.</p>
+                      <p><strong>Confidencial y anónimo.</strong></p>
+                    </div>
+                    
+                    <div class="service-card">
+                      <span class="service-icon">🏥</span>
+                      <h6>INMUJERES (Centros de Justicia)</h6>
+                      <p>Atención psicológica gratuita en Centros de Justicia para Mujeres en todo el país.</p>
+                      <p><strong>Terapia individual y grupal.</strong></p>
+                    </div>
+                    
+                    <div class="service-card">
+                      <span class="service-icon">💻</span>
+                      <h6>Terapia en Línea (ONG)</h6>
+                      <p>Organizaciones como <strong>Red Nacional de Refugios</strong> ofrecen acompañamiento psicológico virtual.</p>
+                      <p><strong>Whatsapp:</strong> 55 5674 9695</p>
+                    </div>
+                  </div>
+                  
+                  <div class="detail-box">
+                    <h5>🧠 ¿Por Qué es Importante la Terapia?</h5>
+                    <ul>
+                      <li><strong>Trauma validado:</strong> La violencia digital causa TEPT (Trastorno de Estrés Postraumático) real</li>
+                      <li><strong>Ansiedad y depresión:</strong> El 78% de víctimas reportan síntomas depresivos severos</li>
+                      <li><strong>Aislamiento social:</strong> Muchas víctimas se apartan de familia y amigos por vergüenza</li>
+                      <li><strong>Ideas suicidas:</strong> El riesgo aumenta significativamente sin apoyo profesional</li>
+                    </ul>
+                    <p><strong>No es tu culpa. Mereces sanar y recuperar tu paz.</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="guide-step">
+              <div class="step-header">
+                <span class="step-number">5</span>
+                <h4>Protege tu Seguridad Digital</h4>
+              </div>
+              <div class="step-content">
+                <p>Mientras se resuelve tu caso, es crucial proteger tu información y privacidad en línea.</p>
+                
+                <div class="security-measures">
+                  <h5>🔒 Medidas Inmediatas de Seguridad:</h5>
+                  
+                  <div class="security-grid">
+                    <div class="security-card">
+                      <h6>🔑 Cambia Todas tus Contraseñas</h6>
+                      <ul>
+                        <li>Redes sociales, email, banca en línea</li>
+                        <li>Usa contraseñas únicas y complejas (mínimo 12 caracteres)</li>
+                        <li>Activa autenticación de dos factores (2FA) en todo</li>
+                        <li>Usa un gestor de contraseñas (LastPass, Bitwarden, 1Password)</li>
+                      </ul>
+                    </div>
+                    
+                    <div class="security-card">
+                      <h6>👁️ Revisa Dispositivos Conectados</h6>
+                      <ul>
+                        <li>Ve a la configuración de cada cuenta y revisa "sesiones activas"</li>
+                        <li>Cierra sesión en todos los dispositivos que no reconozcas</li>
+                        <li>Verifica aplicaciones con acceso a tus cuentas</li>
+                        <li>Revoca permisos a apps sospechosas</li>
+                      </ul>
+                    </div>
+                    
+                    <div class="security-card">
+                      <h6>🕵️ Configura Privacidad al Máximo</h6>
+                      <ul>
+                        <li>Perfil privado en todas las redes sociales</li>
+                        <li>No aceptes solicitudes de desconocidos</li>
+                        <li>Desactiva la geolocalización en publicaciones</li>
+                        <li>Limita quién puede etiquetarte en fotos</li>
+                      </ul>
+                    </div>
+                    
+                    <div class="security-card">
+                      <h6>📧 Crea Email y Número Nuevos</h6>
+                      <ul>
+                        <li>Email temporal para trámites legales</li>
+                        <li>Número de teléfono nuevo si hay acoso</li>
+                        <li>No lo compartas públicamente</li>
+                        <li>Actualiza solo con personas de confianza</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="warning-text">
+                    <p><strong>⚠️ SI SOSPECHAS QUE TU DISPOSITIVO ESTÁ COMPROMETIDO:</strong></p>
+                    <ul>
+                      <li>No lo uses para acceder a cuentas sensibles</li>
+                      <li>Lleva tu dispositivo a revisión técnica profesional</li>
+                      <li>Considera un restablecimiento de fábrica (después de hacer respaldo de pruebas)</li>
+                      <li>Instala antivirus actualizado (Malwarebytes, Kaspersky, Bitdefender)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Directorio de Contactos y Organizaciones -->
+        <div class="contact-directory">
+          <h3>📞 Directorio Completo de Ayuda y Contactos</h3>
+          
+          <div class="directory-grid">
+            <div class="directory-section">
+              <h4>🏛️ Instituciones Gubernamentales</h4>
+              
+              <div class="contact-card">
+                <h5>Comisión Nacional para Prevenir y Erradicar la Violencia Contra las Mujeres (CONAVIM)</h5>
+                <p><strong>Teléfono:</strong> 55 5209 8912</p>
+                <p><strong>Email:</strong> violenciadigital@segob.gob.mx</p>
+                <p><strong>Web:</strong> <a href="https://www.gob.mx/conavim" target="_blank">www.gob.mx/conavim</a></p>
+              </div>
+              
+              <div class="contact-card">
+                <h5>Policía Cibernética (Guardia Nacional)</h5>
+                <p><strong>Teléfono:</strong> 088 (línea directa)</p>
+                <p><strong>Email:</strong> ceac@sspc.gob.mx</p>
+                <p><strong>Denuncia en línea:</strong> <a href="https://www.gob.mx/sspc/acciones-y-programas/denuncia-anonima-089" target="_blank">Formulario</a></p>
+                <p><strong>Horario:</strong> 24/7</p>
+              </div>
+              
+              <div class="contact-card">
+                <h5>Instituto Nacional de las Mujeres (INMUJERES)</h5>
+                <p><strong>Línea Mujeres:</strong> 55 5658 1111</p>
+                <p><strong>Horario:</strong> 24 horas, 7 días a la semana</p>
+                <p><strong>Servicios:</strong> Orientación legal, apoyo emocional, canalización</p>
+              </div>
+            </div>
+            
+            <div class="directory-section">
+              <h4>💜 Organizaciones de la Sociedad Civil</h4>
+              
+              <div class="contact-card">
+                <h5>Frente Nacional para la Sororidad</h5>
+                <p><strong>Facebook:</strong> @FrenteNacionalparala Sororidad</p>
+                <p><strong>Fundadoras:</strong> Olimpia Coral Melo (promotora de la Ley Olimpia)</p>
+                <p><strong>Servicios:</strong> Asesoría legal gratuita, acompañamiento en denuncias</p>
+              </div>
+              
+              <div class="contact-card">
+                <h5>Luchadoras MX (Defensoras Digitales)</h5>
+                <p><strong>Web:</strong> <a href="https://luchadoras.mx" target="_blank">luchadoras.mx</a></p>
+                <p><strong>Email:</strong> contacto@luchadoras.mx</p>
+                <p><strong>Servicios:</strong> Guías de seguridad digital, talleres, asesoría técnica</p>
+              </div>
+              
+              <div class="contact-card">
+                <h5>Red Nacional de Refugios</h5>
+                <p><strong>WhatsApp:</strong> 55 5674 9695</p>
+                <p><strong>Teléfono:</strong> 800 822 4460</p>
+                <p><strong>Servicios:</strong> Refugio, apoyo psicológico, asesoría legal</p>
+              </div>
+              
+              <div class="contact-card">
+                <h5>Artículo 19 (Libertad de Expresión y Protección Digital)</h5>
+                <p><strong>Teléfono:</strong> 55 1054 6500</p>
+                <p><strong>Email:</strong> contacto@articulo19.org</p>
+                <p><strong>Servicios:</strong> Protección a periodistas y defensores, litigio estratégico</p>
+              </div>
+            </div>
+            
+            <div class="directory-section">
+              <h4>⚖️ Asesoría Legal Especializada</h4>
+              
+              <div class="contact-card">
+                <h5>Centro de Justicia para las Mujeres (ubicaciones múltiples)</h5>
+                <p><strong>Servicios gratuitos:</strong> Asesoría legal, representación, acompañamiento</p>
+                <p><strong>Ubicaciones:</strong> Consulta tu estado en <a href="https://www.gob.mx/inmujeres" target="_blank">INMUJERES</a></p>
+              </div>
+              
+              <div class="contact-card">
+                <h5>Programa Universitario de Derechos Humanos (PUDH - UNAM)</h5>
+                <p><strong>Teléfono:</strong> 55 5622 2484</p>
+                <p><strong>Clínica jurídica:</strong> Atención gratuita en casos de violencia de género</p>
+              </div>
+            </div>
+            
+            <div class="directory-section">
+              <h4>🌍 Recursos Internacionales (Si viajas o el agresor está en otro país)</h4>
+              
+              <div class="contact-card">
+                <h5>Cyber Civil Rights Initiative (CCRI) - Estados Unidos</h5>
+                <p><strong>Web:</strong> <a href="https://www.cybercivilrights.org" target="_blank">cybercivilrights.org</a></p>
+                <p><strong>Crisis Helpline:</strong> 844-878-2274</p>
+                <p><strong>Especialidad:</strong> Pornografía de venganza y DeepFakes</p>
+              </div>
+              
+              <div class="contact-card">
+                <h5>Revenge Porn Helpline (Reino Unido)</h5>
+                <p><strong>Email:</strong> help@revengepornhelpline.org.uk</p>
+                <p><strong>Web:</strong> <a href="https://revengepornhelpline.org.uk" target="_blank">revengepornhelpline.org.uk</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Prevención y Educación Digital -->
+        <div class="prevention-section">
+          <h3>🛡️ Prevención: Cómo Protegerte de la Violencia Digital</h3>
+          
+          <p class="lead-paragraph">La mejor defensa es la prevención. Aunque ninguna víctima tiene la culpa, estas medidas pueden reducir significativamente tu riesgo de exposición.</p>
+          
+          <div class="prevention-cards">
+            <div class="prevention-card">
+              <span class="prevention-icon">🔐</span>
+              <h4>Seguridad en Redes Sociales</h4>
+              <ul>
+                <li>Usa contraseñas únicas y complejas para cada plataforma</li>
+                <li>Activa autenticación de dos factores (2FA) siempre</li>
+                <li>Revisa configuraciones de privacidad mensualmente</li>
+                <li>No compartas ubicación en tiempo real</li>
+                <li>Piensa dos veces antes de publicar fotos personales</li>
+                <li>Desactiva la opción de "etiquetar sin permiso"</li>
+              </ul>
+            </div>
+            
+            <div class="prevention-card">
+              <span class="prevention-icon">📸</span>
+              <h4>Cuidado con Contenido Íntimo</h4>
+              <ul>
+                <li><strong>Nunca compartas:</strong> Fotos/videos íntimos a través de apps de mensajería</li>
+                <li><strong>Si decides hacerlo:</strong> Oculta tatuajes, lunares, rostro, fondo reconocible</li>
+                <li><strong>Apps "seguras":</strong> Ninguna app es 100% segura. Las capturas de pantalla siempre son posibles</li>
+                <li><strong>Confiar no es suficiente:</strong> El 60% de pornografía no consensuada es compartida por ex-parejas</li>
+                <li><strong>Eliminar no es suficiente:</strong> Una vez enviado, pierde el control</li>
+              </ul>
+            </div>
+            
+            <div class="prevention-card">
+              <span class="prevention-icon">🚨</span>
+              <h4>Señales de Alerta (Red Flags)</h4>
+              <ul>
+                <li>Alguien te presiona para enviar fotos íntimas</li>
+                <li>Amenazas de "exponer" información si terminas la relación</li>
+                <li>Tu pareja revisa constantemente tu celular sin permiso</li>
+                <li>Encuentras apps de monitoreo instaladas en tu dispositivo</li>
+                <li>Alguien sabe información que solo podría obtener accediendo a tu cuenta</li>
+              </ul>
+            </div>
+            
+            <div class="prevention-card">
+              <span class="prevention-icon">👨‍👩‍👧</span>
+              <h4>Educación a Menores</h4>
+              <p><strong>Padres, madres y educadores:</strong> Es fundamental hablar con niños, niñas y adolescentes sobre:</p>
+              <ul>
+                <li>Riesgos reales de compartir información personal en línea</li>
+                <li>Qué es el grooming y cómo identificarlo</li>
+                <li>Importancia de no compartir fotos con extraños</li>
+                <li>Crear ambiente de confianza para que puedan pedir ayuda sin miedo</li>
+                <li>Configurar controles parentales en dispositivos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Herramientas Tecnológicas -->
+        <div class="tech-tools-section">
+          <h3>🔧 Herramientas Tecnológicas para Protección</h3>
+          
+          <div class="tools-grid">
+            <div class="tool-card">
+              <h4>🔍 Búsqueda Inversa de Imágenes</h4>
+              <p>Si sospechas que están usando tus fotos sin permiso:</p>
+              <ul>
+                <li><strong>Google Images:</strong> <a href="https://images.google.com" target="_blank">images.google.com</a> - Sube tu foto y busca coincidencias</li>
+                <li><strong>TinEye:</strong> <a href="https://tineye.com" target="_blank">tineye.com</a> - Motor de búsqueda especializado</li>
+                <li><strong>PimEyes:</strong> Búsqueda de rostros (controversia por privacidad, úsalo con precaución)</li>
+              </ul>
+            </div>
+            
+            <div class="tool-card">
+              <h4>🗑️ Eliminación de Metadatos</h4>
+              <p>Antes de compartir cualquier foto, elimina metadatos que revelen ubicación, dispositivo, etc.:</p>
+              <ul>
+                <li><strong>Windows:</strong> Clic derecho → Propiedades → Detalles → "Quitar propiedades"</li>
+                <li><strong>Mac:</strong> Vista previa → Herramientas → Mostrar inspector → Quitar info GPS</li>
+                <li><strong>App móvil:</strong> "Scrambled Exif" (Android), "Metapho" (iOS)</li>
+              </ul>
+            </div>
+            
+            <div class="tool-card">
+              <h4>🔐 Gestores de Contraseñas</h4>
+              <ul>
+                <li><strong>Bitwarden:</strong> Gratuito y de código abierto</li>
+                <li><strong>LastPass:</strong> Versión gratuita disponible</li>
+                <li><strong>1Password:</strong> Premium, pero muy seguro</li>
+              </ul>
+            </div>
+            
+            <div class="tool-card">
+              <h4>🛡️ Navegación Segura</h4>
+              <ul>
+                <li><strong>VPN:</strong> ProtonVPN (gratuito), NordVPN, ExpressVPN</li>
+                <li><strong>Navegador:</strong> Brave (bloqueador de rastreadores integrado), Tor (anonimato máximo)</li>
+                <li><strong>Buscador:</strong> DuckDuckGo (no rastrea búsquedas)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Glosario Completo -->
+        <div class="glossary-section">
+          <h3>📚 Glosario de Términos</h3>
+          
+          <div class="glossary-grid">
+            <div class="glossary-item">
+              <dt>DeepFake</dt>
+              <dd>Contenido audiovisual manipulado mediante inteligencia artificial para reemplazar el rostro o cuerpo de una persona real con el de otra, creando videos, audios o imágenes falsas pero altamente realistas.</dd>
+            </div>
+            
+            <div class="glossary-item">
+              <dt>Violencia Digital</dt>
+              <dd>Cualquier acto de violencia de género cometido, asistido o agravado por el uso de tecnologías de la información y comunicación (TIC), incluyendo redes sociales, plataformas digitales, correo electrónico, etc.</dd>
+            </div>
+            
+            <div class="glossary-item">
+              <dt>Ley Olimpia</dt>
+              <dd>Conjunto de reformas legislativas en México que reconocen la violencia digital como delito, específicamente la difusión de contenido sexual o íntimo sin consentimiento. Nombrada en honor a Olimpia Coral Melo, activista que impulsó la ley después de ser víctima.</dd>
+            </div>
+            
+            <div class="glossary-item">
+              <dt>Pornografía de Venganza (Revenge Porn)</dt>
+              <dd>Distribución de imágenes o videos sexualmente explícitos de una persona sin su consentimiento, generalmente por una ex pareja con la intención de humillar o dañar.</dd>
+            </div>
+            
+            <div class="glossary-item">
+              <dt>Sextorsión</dt>
+              <dd>Forma de chantaje en la que se amenaza con publicar material íntimo de la víctima a menos que pague dinero, envíe más contenido sexual, o cumpla otras demandas.</dd>
+            </div>
+            
+            <div class="glossary-item">
+              <dt>Doxing (Doxxing)</dt>
+              <dd>Publicación de información personal privada de alguien en internet sin su consentimiento (dirección, teléfono, datos familiares, etc.) con la intención de acosar, amenazar o dañar.</dd>
+            </div>
+            
+            <div class="glossary-item">
+              <dt>Ciberacoso</dt>
+              <dd>Acoso, hostigamiento o intimidación sistemática a través de medios digitales. Puede incluir mensajes ofensivos, amenazas, difamación, exclusión deliberada, etc.</dd>
+            </div>
+            
+            <div class="glossary-item">
+              <dt>Grooming</dt>
+              <dd>Proceso de manipulación por el cual un adulto establece una relación de confianza con un menor de edad para luego abusar sexualmente de él/ella, ya sea en el mundo físico o digital.</dd>
+            </div>
+            
+            <div class="glossary-item">
+              <dt>Stalking (Acecho Digital)</dt>
+              <dd>Seguimiento obsesivo y no deseado de una persona a través de plataformas digitales, redes sociales, GPS, apps de rastreo, etc.</dd>
+            </div>
+            
+            <div class="glossary-item">
+              <dt>Metadatos</dt>
+              <dd>Información "oculta" en archivos digitales (fotos, videos, documentos) que puede revelar fecha, hora, ubicación GPS, dispositivo usado, y otros datos técnicos.</dd>
+            </div>
+            
+            <div class="glossary-item">
+              <dt>Autenticación de Dos Factores (2FA)</dt>
+              <dd>Medida de seguridad que requiere dos formas de verificación antes de acceder a una cuenta (ejemplo: contraseña + código SMS).</dd>
+            </div>
+            
+            <div class="glossary-item">
+              <dt>Consentimiento Informado</dt>
+              <dd>Permiso explícito, voluntario y con pleno conocimiento de las implicaciones, que una persona da antes de compartir contenido íntimo o información personal.</dd>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mensaje Final de Apoyo -->
+        <div class="final-support-message">
+          <h3>💜 No Estás Sola</h3>
+          <p>La violencia digital es un crimen real con consecuencias reales. <strong>No es tu culpa</strong> y mereces justicia, apoyo y sanación.</p>
+          <p>Si estás pasando por esto, recuerda:</p>
+          <ul>
+            <li>✅ <strong>Tienes derecho a denunciar</strong> y a que te crean</li>
+            <li>✅ <strong>La Ley Olimpia te protege</strong> en todo México</li>
+            <li>✅ <strong>Existen personas y organizaciones</strong> que te van a apoyar sin juzgarte</li>
+            <li>✅ <strong>El proceso es difícil, pero no imposible</strong></li>
+            <li>✅ <strong>Tu voz importa</strong> y puede ayudar a otras víctimas</li>
+          </ul>
+          
+          <div class="emergency-box">
+            <h4>🆘 Si Estás en Crisis Inmediata:</h4>
+            <p><strong>Línea Mujeres (24/7):</strong> <a href="tel:5556581111">55 5658 1111</a></p>
+            <p><strong>Policía Cibernética:</strong> <a href="tel:088">088</a></p>
+            <p><strong>Emergencias:</strong> <a href="tel:911">911</a></p>
+            <p><strong>Red Nacional de Refugios (WhatsApp):</strong> <a href="https://wa.me/525556749695">55 5674 9695</a></p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <img src="assets/logo.svg" alt="Logo Violencia Digital" class="footer-logo" height="32" width="32" />
+      <p>&copy; 2025 Violencia Digital México. Sitio informativo y de ayuda. <a href="#inicio">Volver arriba ↑</a></p>
+    </div>
+  </footer>
+  
+  <!-- Modal para expandir gráficas -->
+  <div id="chartModal" class="chart-modal">
+    <div class="chart-modal-content">
+      <button class="chart-modal-close" aria-label="Cerrar gráfica expandida">&times;</button>
+      <div class="chart-modal-header">
+        <h3 id="modalChartTitle"></h3>
+      </div>
+      <div class="chart-modal-body">
+        <canvas id="modalChart"></canvas>
+      </div>
+      <p class="chart-modal-source" id="modalChartSource"></p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <script src="charts.js"></script>
+</body>
+</html>
