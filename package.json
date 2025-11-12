@@ -1,0 +1,14 @@
+{
+  "name": "proyecto-derecho",
+  "version": "1.0.0",
+  "description": "Servidor estático para Proyecto-Derecho",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "CarlosArenasCode",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

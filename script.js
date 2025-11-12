@@ -508,6 +508,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const timelineHeaders = document.querySelectorAll('.timeline-header');
   
   timelineHeaders.forEach(header => {
+    // Expandir todos los elementos por defecto al cargar la página
+    const content = header.nextElementSibling;
+    if (content && content.classList.contains('collapsed')) {
+      content.classList.remove('collapsed');
+      content.classList.add('expanded');
+      header.setAttribute('aria-expanded', 'true');
+    }
+    
     header.addEventListener('click', function() {
       const content = this.nextElementSibling;
       const isExpanded = this.getAttribute('aria-expanded') === 'true';

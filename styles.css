@@ -677,8 +677,8 @@ body.dark-mode .hero-canvas {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
+  opacity: 1;
+  transform: translateY(0);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1723,7 +1723,7 @@ body.dark-mode .carousel-slide .victim-quote {
 }
 
 .level-item {
-  background: #fff;
+  background: gray;
   padding: 1rem 1.5rem;
   border-radius: var(--radius-sm);
   margin-bottom: 1rem;
@@ -2250,7 +2250,7 @@ body.dark-mode .emphasis-text {
 }
 
 .detail-card {
-  background: #fff;
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
   padding: 2.5rem;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
